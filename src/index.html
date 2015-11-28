@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="GDG-SuperHero" ng-strict-di>
+<head>
+    <title>GDG-Heroes</title>
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style/home/home.css"/>
+</head>
+<body ng-controller="HomeController as HomeController">
+<div class="container">
+    <div class="row">
+
+        <hero ng-repeat="hero in HomeController.heroesList"
+              name = "hero.name"
+              picture = "hero.picture"
+              height = "hero.height"
+              nickname = "hero.nickname"
+              number = "$index"
+              class = "col-md-4">
+        </hero>
+
+    </div>
+</div>
+
+
+<script src="libs/angular/angular.min.js"></script>
+<script src="scripts/app.min.js"></script>
+</body>
+</html>
